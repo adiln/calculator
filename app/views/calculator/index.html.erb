@@ -1,5 +1,5 @@
 <div style="width:600px; margin:0 auto;">
-  <%= form_for :calculator, url: { action: :evalute }, method: :post do |f|   %>
+  <%= form_for :calculator, url: { action: :evaluate }, method: :post do |f|   %>
       <%= text_field_tag :input, params[:input] %>
       <%= f.submit 'Submit' %>
   <% end %>

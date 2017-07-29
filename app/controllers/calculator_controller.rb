@@ -4,7 +4,7 @@ class CalculatorController < ApplicationController
   def index
   end
 
-  def evalute
+  def evaluate
   	@result = execute(params[:input])
     render :index
   end

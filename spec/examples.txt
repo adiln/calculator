@@ -1,0 +1,4 @@
+example_id                                                | status | run_time        |
+--------------------------------------------------------- | ------ | --------------- |
+./spec/controllers/calculator_controller_spec.rb[1:1:1]   | passed | 0.00677 seconds |
+./spec/controllers/calculator_controller_spec.rb[1:2:1:1] | passed | 0.0057 seconds  |

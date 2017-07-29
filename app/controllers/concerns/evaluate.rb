@@ -12,7 +12,6 @@ module Evaluate
       if (['+', '-', '*', '/'].include?(elem))
         while (!operators.empty? && check_precedence(elem, operators.last))
           e = apply_operator operators.pop, values.pop, values.pop
-
           values << e
         end
         operators << elem
@@ -21,7 +20,6 @@ module Evaluate
 
     while (!operators.empty?)
       e = apply_operator operators.pop, values.pop, values.pop
-
       values << e
     end
     return values.pop

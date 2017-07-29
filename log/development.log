@@ -2881,3 +2881,105 @@ Processing by CalculatorController#evalute as HTML
 Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-07-30 02:03:28 +0530
+Processing by CalculatorController#index as HTML
+  Rendering calculator/index.html.erb within layouts/application
+  Rendered calculator/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 42ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/evalute" for 127.0.0.1 at 2017-07-30 02:03:34 +0530
+Processing by CalculatorController#evalute as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7TPakX//5xacpPl39kyWisYqIdLPmU2KlAfx02KX2aY77yk0fCRHe4mIVTumjcjczC/my8XwRSqZrkjmVganWA==", "input"=>"5*3+1+6/2+9*100", "commit"=>"Submit"}
+  Rendering calculator/index.html.erb within layouts/application
+  Rendered calculator/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (93.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (73.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-07-29 20:42:18.846192"], ["updated_at", "2017-07-29 20:42:18.846192"]]
+  [1m[35m (60.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2017-07-30 02:17:03 +0530
+Processing by CalculatorController#index as HTML
+  Rendering calculator/index.html.erb within layouts/application
+  Rendered calculator/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/evaluate" for 127.0.0.1 at 2017-07-30 02:17:07 +0530
+Processing by CalculatorController#evaluate as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BvupbidfH6MSdthjYePfzH9zYccYykDPuLlhus6lToo/Dh5E1f7Kx7EGQI9h/UuqpqB0Zo39lFv3cAjHEZweRA==", "input"=>"5*3+1+6/2+9*100", "commit"=>"Submit"}
+  Rendering calculator/index.html.erb within layouts/application
+  Rendered calculator/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 11287ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/evaluate" for 127.0.0.1 at 2017-07-30 02:37:13 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/evaluate"):
+  
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/adil/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/adil/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/adil/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered collection of /home/adil/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [3 times] (25.1ms)
+  Rendered /home/adil/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (13.2ms)
+  Rendering /home/adil/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/adil/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/adil/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (63.1ms)
+Started GET "/" for 127.0.0.1 at 2017-07-30 02:37:49 +0530
+Processing by CalculatorController#index as HTML
+  Rendering calculator/index.html.erb within layouts/application
+  Rendered calculator/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/evaluate" for 127.0.0.1 at 2017-07-30 02:37:54 +0530
+Processing by CalculatorController#evaluate as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BIMqM5RUcGsinWsKr4npuwLo9qqxvr5Vgn6f23O3c5M9dp0ZZvWlD4Ht8+avl33d2zvjCySJasHNt/amrI4jXQ==", "input"=>"5*3+1+6/2+9*100", "commit"=>"Submit"}
+  Rendering calculator/index.html.erb within layouts/application
+  Rendered calculator/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/evaluate" for 127.0.0.1 at 2017-07-30 02:38:01 +0530
+Processing by CalculatorController#evaluate as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DEsiwXJ84bKWd2l6k4dLcclcVEpmvYEOMMD4oMDPWVA1vpXrgN001jUH8ZaTmd8XEI9B6/OKVZp/CZHdH/YJng==", "input"=>"5*3+1+6/85+9*100", "commit"=>"Submit"}
+  Rendering calculator/index.html.erb within layouts/application
+  Rendered calculator/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/evaluate" for 127.0.0.1 at 2017-07-30 02:38:06 +0530
+Processing by CalculatorController#evaluate as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ym6gOucUVMDmLDIkoUibyxrlvk9yXaXfXCehwuGYQQfzmxcQFbWBpEVcqsihVg+twzar7udqcUsT7si/PqERyQ==", "input"=>"5*3+1+6/85", "commit"=>"Submit"}
+  Rendering calculator/index.html.erb within layouts/application
+  Rendered calculator/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
