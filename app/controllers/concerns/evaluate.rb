@@ -6,21 +6,23 @@ module Evaluate
     operators = []
     values = []
     params.delete(' ').split(/\s+|\b/).each do |elem|
+      # collect numbers
       if (!!(elem =~ /^\d+$/))
         values << to_float_or_int(elem)
       end
+      #collect operators, check precedence. If top oprator(in stack) has higher or same precedence
+      #to the current operator, then calculate with top operator and two top values
       if (['+', '-', '*', '/'].include?(elem))
         while (!operators.empty? && check_precedence(elem, operators.last))
-          e = apply_operator operators.pop, values.pop, values.pop
-          values << e
+          values << (apply_operator operators.pop, values.pop, values.pop)
         end
         operators << elem
       end
     end
 
+    # calculate values with remaining operators
     while (!operators.empty?)
-      e = apply_operator operators.pop, values.pop, values.pop
-      values << e
+      values << (apply_operator operators.pop, values.pop, values.pop)
     end
     return values.pop
   end
@@ -51,6 +53,7 @@ module Evaluate
     end
   end
 
+  # convert string to integer or float
   def to_float_or_int str
     Integer(str) rescue Float(str) rescue nil
   end
