@@ -23,5 +23,8 @@ Things you may want to cover:
 
 * ...
 # calculator
-# calculator
-# calculator
+
+
+#Ruby 2.3.1
+#Rails 5.0.4
+
